@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <!-- Header START -->
+	<div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">BookStore</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" th:href="@{/book}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/user}">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+	</div>
+	<!-- Header END -->
+	<div class="row mt-3">
+		<div class="col-sm-12 col-md-12">
+			<b style="margin-left:7%; font-size:110%;">Add Book Detail</b>
+		</div>
+	</div>
+	<div class="container mt-3" >
+		<div class="jumbotron">
+			
+			<form action="submit" method="POST">
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group ">
+							<label for="bName">Book Name<span style="color: red;">*</span></label>
+							<input type="text" class="form-control" id="bookName"
+								placeholder="Enter Book Name" name="bookName" required>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="wName">Writer Name<span style="color: red;">*</span></label>
+							<input type="text" class="form-control" id="writerName"
+								placeholder="Enter writerName" name="writerName" required>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="pName">Publication Name<span
+								style="color: red;">*</span></label> 
+							<input type="text"
+								class="form-control" id="publicationName" placeholder="Publication Name"
+								name="publicationName" required>
+
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="sName">Seres of editions<span
+								style="color: red;">*</span></label> <input type="text"
+								class="form-control" id="seriesName" placeholder="Seres of editions"
+								name="seriesName" required>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="pYear">Publiced Year</label> 
+							<input type="text"
+								class="form-control" id="publicedYear" placeholder="Publiced Year"
+								name="publicedYear" />
+						</div>
+					</div>
+
+
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="mrp">MRP</label>
+							<input type="text"
+								class="form-control" id="mrp" placeholder="Enter MRP" name="mrp" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<label for="tag">TAG</label>
+							<textarea type="text" class="form-control" id="tag"
+								placeholder="Enter TAG" name="tag"></textarea>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="form-group">
+							<button type="save" class="btn btn-primary active">Save
+								Book</button>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
